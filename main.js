@@ -141,8 +141,8 @@ const light = new THREE.DirectionalLight(lightingColor, lightingPower);   // Lig
 light.castShadow = true;
 scene.add(light)
 
-new RGBELoader().load('skyes.hdr', onHDRMapLoaded);
-new GLTFLoader().load('model.glb', onModelLoaded, function (xhr) {
+new RGBELoader().load('./assets/skyes.hdr', onHDRMapLoaded);
+new GLTFLoader().load('./assets/model.glb', onModelLoaded, function (xhr) {
   console.log((xhr.loaded / xhr.total) * 100 + "% loaded");
 }, function (error) {
   alert(error)
