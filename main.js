@@ -30,6 +30,8 @@ const character3DModel = {
   animationEffectType: "run",
   object: null
 }
+const lightingPower = 16;
+const lightingColor = 0xffdc73;
 
 let mixer,
   clock = new THREE.Clock();
@@ -135,7 +137,7 @@ window.addEventListener('resize', onWindowResize, false);
 /*
   MAIN THREAD
 */
-const light = new THREE.DirectionalLight(0xffdc73, 16);   // Light
+const light = new THREE.DirectionalLight(lightingColor, lightingPower);   // Light
 light.castShadow = true;
 scene.add(light)
 
